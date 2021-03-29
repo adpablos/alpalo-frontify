@@ -1,0 +1,82 @@
+{
+  "errors": [],
+  "warnings": [],
+  "version": "4.46.0",
+  "hash": "c82ee2f70ba4af9a6906",
+  "publicPath": "/static/",
+  "outputPath": "/Users/adpablos/Alex/Proyectos-personales/repositorios/alpalo-frontify/build/static",
+  "assetsByChunkName": {
+    "my-first-frontity-project": "my-first-frontity-project.module.js"
+  },
+  "assets": [
+    {
+      "name": "my-first-frontity-project.module.js",
+      "size": 6090191,
+      "chunks": [
+        "my-first-frontity-project"
+      ],
+      "chunkNames": [
+        "my-first-frontity-project"
+      ],
+      "info": {},
+      "emitted": false
+    }
+  ],
+  "filteredAssets": 0,
+  "entrypoints": {
+    "my-first-frontity-project": {
+      "chunks": [
+        "my-first-frontity-project"
+      ],
+      "assets": [
+        "my-first-frontity-project.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "namedChunkGroups": {
+    "my-first-frontity-project": {
+      "chunks": [
+        "my-first-frontity-project"
+      ],
+      "assets": [
+        "my-first-frontity-project.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "chunks": [
+    {
+      "id": "my-first-frontity-project",
+      "rendered": true,
+      "initial": true,
+      "entry": true,
+      "size": 1497114,
+      "names": [
+        "my-first-frontity-project"
+      ],
+      "files": [
+        "my-first-frontity-project.module.js"
+      ],
+      "hash": "dbdb81b87aaa2dfe4f01",
+      "siblings": [],
+      "parents": [],
+      "children": [],
+      "childrenByOrder": {},
+      "modules": [],
+      "filteredModules": 0,
+      "origins": []
+    }
+  ],
+  "logging": {
+    "webpack.buildChunkGraph.visitModules": {
+      "entries": [],
+      "filteredEntries": 2,
+      "debug": false
+    }
+  },
+  "children": [],
+  "generator": "loadable-components"
+}
