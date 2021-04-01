@@ -1,11 +1,4 @@
-const Root = () => {
-  return (
-    <>
-      You can edit your package in:
-      <pre>packages/alpalo-theme/src/index.js</pre>
-    </>
-  );
-};
+import Root from "./components"
 
 export default {
   name: "alpalo-theme",
