@@ -5,12 +5,20 @@ import Switch from "@frontity/components/switch"
 import List from "./list"
 import Post from "./post"
 import Page from "./page"
+import { Global, css } from "frontity"
 
 const Root = ({ state }) => {
     const data = state.source.get(state.router.link)
 
     return (
         <>
+            <Global
+                styles={css`
+                  html {
+                    font-family: system-ui, Verdana, Arial, sans-serif;
+                  }
+                `}
+            />
             <h1>Hey there! I am Alex!</h1>
             <p>Current URL from state: {state.router.link}</p>
             <nav>
