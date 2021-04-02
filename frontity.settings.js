@@ -15,7 +15,7 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "url": "https://alpalo.es"
+          "url": "https://test.frontity.org"
         }
       }
     },
