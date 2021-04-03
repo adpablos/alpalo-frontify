@@ -6,6 +6,7 @@ import List from "./list"
 import Post from "./post"
 import Page from "./page"
 import Loading from "./loading"
+import Error from "./error"
 
 const Root = ({ state, actions }) => {
     const data = state.source.get(state.router.link)
@@ -42,6 +43,7 @@ const Root = ({ state, actions }) => {
             </Header>
             <Main>
                 <Switch>
+                    <Error when={data.isError} />
                     <Loading when={data.isFetching}/>
                     <List when={data.isArchive} />
                     <Post when={data.isPost} />
