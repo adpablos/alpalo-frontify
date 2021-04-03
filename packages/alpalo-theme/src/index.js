@@ -1,4 +1,5 @@
 import Root from "./components"
+import link from "@frontity/html2react/processors/link";
 
 export default {
   name: "alpalo-theme",
@@ -17,4 +18,9 @@ export default {
       },
     },
   },
+  libraries: {
+    html2react: {
+      processors: [link]
+    }
+  }
 };
