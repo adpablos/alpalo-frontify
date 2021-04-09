@@ -22,6 +22,17 @@ const settings = {
               endpoint: "destinations",
               archive: "/destinations"
             }
+          ],
+          taxonomies: [
+            {
+              taxonomy: "regions",
+              endpoint: "regions",
+              postTypeEndpoint: "/regions",
+              params: {
+                per_page: 5,
+                _embed: true
+              }
+            }
           ]
         }
       }

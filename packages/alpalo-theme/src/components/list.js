@@ -9,11 +9,17 @@ const List = ({ state, actions }) => {
         <Items>
             {data.items.map((item) => {
                 const post = state.source[item.type][item.id]
+                const img = state.source.attachment[post.featured_media]
+
                 return (
-                    <Link key={item.id} link={post.link}>
-                        {post.title.rendered}
-                        <br />
-                    </Link>
+                    <>
+                        <Link key={item.id} link={post.link}>
+                            {post.title.rendered}
+                            <br />
+                        </Link>
+                        { img && <img src={img.source_url} alt={img.alt_text} /> }
+                        <>{post.excerpt.rendered} <Link key={item.id} link={post.link}> >> Read more...</Link> </>
+                    </>
                 )
             })}
             <PrevNextNav>
@@ -47,7 +53,7 @@ const Items = styled.div`
     display: block;
     margin: 6px 0;
     font-size: 1.2em;
-    color: steelblue;
+    color: 'lightseagreen';
     text-decoration: none;
   }
 `
