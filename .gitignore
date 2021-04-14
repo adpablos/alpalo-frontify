@@ -108,3 +108,5 @@ dist
 # Intellij
 .DS_Store
 .idea/
+
+.vercel
