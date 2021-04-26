@@ -1,50 +1,49 @@
-import React from "react"
+import React, { useState } from "react"
 import { connect, Global, css, styled, Head } from "frontity"
 import Switch from "@frontity/components/switch"
 import List from "./list"
 import Post from "./post"
 import Loading from "./loading"
 import Error from "./error"
-import HeaderComponent from "./header"
+import Header from "./Header"
 import Destination from "./destination"
+import defaultCss from "../css/default.css"
+import layoutCss from "../css/layout.css"
+import Resume from "./Resume";
+import Footer from "./Footer";
+import About from "./About";
+import Contact from "./Contact";
+
+import { CacheProvider } from '@emotion/core'
+import createCache from '@emotion/cache'
 
 const Root = ({ state }) => {
-    const data = state.source.get(state.router.link)
+    const myCache = createCache()
+    myCache.compat = true
 
+    const data = state.source.get(state.router.link)
     return (
-        <>
-            <Global
-                styles={css`
-                    * {
-                        margin: 0;
-                        padding: 0;
-                        box-sizing: border-box;
-                    }                
-                    html {
-                        font-family: system-ui, Verdana, Arial, sans-serif;
-                    }
-                `}
-            />
-            <Head>
-                <title>My First Frontity Theme</title>
-                <meta
-                    name="description"
-                    content="Based on the Frontity step by step tutorial"
-                />
-            </Head>
-            <HeaderComponent isPostType={data.isPostType} isPage={data.isPage}/>
-            <Main>
-                <Switch>
-                    <Error when={data.isError} />
-                    <Loading when={data.isFetching}/>
-                    <Destination when={data.isDestinationsArchive}/>
-                    <List when={data.isArchive} />
-                    <Post when={data.isPost} />
-                    <Post when={data.isPage} />
-                    <Post when={data.isDestinations} />
-                </Switch>
-            </Main>
-        </>
+        <div className="App">
+            <Global styles={defaultCss} />
+            <Global styles={layoutCss} />
+            <Header />
+            {/*<HeaderComponent isPostType={data.isPostType} isPage={data.isPage}/>*/}
+            {/*<Main>*/}
+            {/*    <Switch>*/}
+            {/*        <Error when={data.isError} />*/}
+            {/*        <Loading when={data.isFetching}/>*/}
+            {/*        <Destination when={data.isDestinationsArchive}/>*/}
+            {/*        <List when={data.isArchive} />*/}
+            {/*        <Post when={data.isPost} />*/}
+            {/*        <Post when={data.isPage} />*/}
+            {/*        <Post when={data.isDestinations} />*/}
+            {/*    </Switch>*/}
+            {/*</Main>*/}
+            <About />
+            <Resume />
+            <Contact />
+            <Footer />
+        </div>
     )
 }
 
