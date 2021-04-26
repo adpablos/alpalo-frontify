@@ -14,12 +14,7 @@ import Footer from "./Footer";
 import About from "./About";
 import Contact from "./Contact";
 
-import { CacheProvider } from '@emotion/core'
-import createCache from '@emotion/cache'
-
 const Root = ({ state }) => {
-    const myCache = createCache()
-    myCache.compat = true
 
     const data = state.source.get(state.router.link)
     return (

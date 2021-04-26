@@ -34,7 +34,7 @@ if (module["hot"]) {
         frontity__tiny_router_default,
         frontity__html2react_default,
       };
-      client({ packages });
+      client({ packages, isHmr: true });
     }
   );
 }
